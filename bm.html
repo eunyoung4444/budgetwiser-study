@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>대중 참여형 정책 수립을 위한 크라우드소싱 정책 플랫폼 고안</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            font-family: "open sans";
+        }
+        #main {
+            margin-left: 30px;
+            width: 600px;
+        }
+        #main div {
+            margin: 15px;
+        }
+        h3 {
+            color: teal;
+        }
+        a, a:active, a:visited {
+            color: #222;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        a:hover {
+            color: teal;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div id="tabs" class="clearfix">
+        <h1>대중 참여형 정책 수립을 위한 크라우드소싱 정책 플랫폼 고안</h1>
+    </div>
+
+    <div id="main">
+        <div id="leftpane">
+            <h2>참가자 ID: <span id="participant-id"></span></h2>
+            <div>
+                "대중 참여형 정책 수립을 위한 크라우드소싱 정책 플랫폼 고안" 연구 관련 실험에 참여해 주셔서 감사합니다. 다음은 실험 순서 및 방법에 대한 안내사항입니다. 실험 도중에 문의사항이 있으실 경우 실험 진행자에게 알려주시기 바랍니다.
+            </div>
+            <div id="tasks">
+
+            <h3>1.실험 전 설문 (5분)</h3>
+                <div>
+                <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
+                <a target="_blank" href="" id="preQ">[실험 전 설문]</a></h4>
+                </div>
+
+            <h3>2. 인터페이스 Tutorial (10분)</h3>
+                <div>
+본 실험에서 참가자 분은 예산에 관련된 세 가지 서로 다른 인터페이스를 사용하시게 됩니다. 각 인터페이스의 사용방법은 아래 링크에 자세히 나와 있습니다. <br/>
+                <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
+                <a target="_blank" href="" id="tutorialQ">[인터페이스 사용 방법]</a></h4>
+<strong>Note</strong>: 본 실험에서 ‘사업’이라 함은 서울시에서 예산을 집행하는 단위로, ‘저소득 어르신 급식 지원’, ‘120 다산 콜센터 운영’ 등은 서울시에서 진행하는 사업 중 일부입니다. 현재 서울시는 약 3142개의 사업을 진행하고 있습니다.
+                </div>
+            <h3>3. 본 실험 (총 30분)</h3>
+                <div id="muddymix">
+ 본 실험에서 귀하는 세 가지 이슈(장애인 복지, 안전 예산, 육아 지원)과 관련된 서울시 예산을 찾는 일을 하게 됩니다. 서로 다른 세 가지의 이슈를 각기 다른 세 인터페이스 A, B, C를 통해 탐색하게 됩니다. 각 탐색의 목적은  해당 이슈에 서울시가 사용하고 있는 예산 규모를 예측해 보는 것입니다.
+ 각 탐색에는 7분의 시간이 주어지며 실험 진행자가 3분 전, 1분 전에 알려드립니다. 탐색이 일찍 끝난 경우 다음 탐색으로 넘어가지 마시고 기다려 주십시오. 매 7분이 지난 후 탐색이 끝날 때마다 아래 링크의 설문조사를 작성하신 뒤 다음 안내가 있을 때까지 기다려 주십시오.<br/>
+                <h4><span id="issue1"></span></h4>
+                <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
+                <a target="_blank" href="" id="explore1">[인터페이스 <span id="explore1Condition"></span>]</a> (7분)</h4>
+
+                <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
+                <a target="_blank" href="" id="exploreQ1">[탐색 후 설문]</a></h4>
+
+                <h4><span id="issue2"></span></h4>
+                <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
+                <a target="_blank" href="" id="explore2">[인터페이스 <span id="explore2Condition"></span>]</a> (7분)</h4>
+
+                <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
+                <a target="_blank" href="" id="exploreQ2">[탐색 후 설문]</a></h4>
+
+                <h4><span id="issue3"></span></h4>
+                <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
+                <a target="_blank" href="" id="explore3">[인터페이스 <span id="explore3Condition"></span>]</a> (7분)</h4>
+
+                <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
+                <a target="_blank" href="" id="exploreQ3">[탐색 후 설문]</a></h4>
+
+                </div>
+            <h3>4. 실험 후 설문(10분)</h3>
+                <div>
+                <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
+                <a target="_blank" href="" id="postQ">[실험 후 설문]</a></h4>
+                </div>
+
+            <h3>5. 국가 재정 지출 인식 조사(10~15분)</h3>
+                <div>
+                서울시가 아닌 국가 전체의 재정 지출에 대한 설문조사입니다. 아래 링크를 클릭해 몇가지 문항에 답변해 주시면 됩니다.
+                <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
+                <a target="_blank" href="" id="finalQ">[국가 재정 지출 인식 조사]</a></h4>
+                </div>
+        </div>
+    </div>
+    <hr>
+    <div class="clearfix">
+        <div>실험에 참여해 주셔서 감사합니다. </div>
+        <br/><br/>
+    </div>
+</div>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script>
+    function gup(name) {
+        var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+        return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+
+    var pid = gup("pid");
+
+    var preQ = "https://docs.google.com/forms/d/1Hmb_GIbgUjlDHVgLaffdIw-ZwvFOGi7EV5p4bwumhnI/viewform";
+    var tutorialQ = "https://docs.google.com/document/d/1U60ikNFIGbXQ5nmaSGxjjWjwtoQdwfyki8Jz5PuDCwI/edit?usp=sharing";
+    var exploreQ = "https://docs.google.com/forms/d/1bAHMcoCLzqWM6I-0uiWSoh9avBZ3CT-jeOaP2AZomEM/viewform";
+    var postQ = "https://docs.google.com/forms/d/1tcFqurFYSw3GnH4QmDNl66WwGAVULnVtx8gom3GGRmA/viewform";
+    var finalQ = "";
+
+
+    var mixes = {};
+//        "s01": {"mix1": "", "mix2": "", "mix1cond": "", "mix2cond": ""},
+//        "s02": {"mix1": "", "mix2": "", "mix1cond": "", "mix2cond": ""}
+
+
+    var numParticipants = 24;
+    var numTasks = 3;
+
+    var issues = ["장애인 복지", "안전 예산", "육아 지원"];
+    var mappings = [
+        ["A", "B", "C"], ["A", "C", "B"], ["B", "C", "A"], ["B", "A", "C"], ["C", "A", "B"], ["C", "B", "A"]
+    ];
+
+    var url = "http://143.248.234.88";
+    var postfixes = ["/empty", "/", "/explore"];
+
+    var conditions = {};
+
+    function createUrl(port, interface) {
+        var index;
+        var result;
+        if (interface == "A")
+            index = 0;
+        else if (interface == "B")
+            index = 1;
+        else if (interface == "C")
+            index = 2;
+        result = url + ":" + port + postfixes[index];
+        console.log(result);
+        return result;
+    }
+
+    function createTasks() {
+        var i, j, itype, vtype, taskOrder;
+        var taskCount = 0;
+        for (i = 1; i <= numParticipants; i++) {
+            console.log("Participant", i);
+            taskOrder = mappings[(i-1) % 6];
+            port = 30000 + (i % 12);
+
+            for (j = 0; j < numTasks; j++) {
+                taskCount += 1;
+                // taskOrder = taskCount % tseq.length;
+
+                conditions[taskCount] = {
+                    "pid": i,
+                    "tid": taskCount,
+                    "torder": j + 1,
+                    "itype": taskOrder[j],
+                    "url": createUrl(port, taskOrder[j])
+                }
+            }
+
+        }
+        console.log(taskCount, "tasks created");
+        // console.log(conditions);
+
+        for (var cond in conditions) {
+            console.log("pid:", conditions[cond].pid, "tid:", conditions[cond].tid, "torder:", conditions[cond].torder, "itype:", conditions[cond].itype, "url:", conditions[cond].url);
+        }
+
+    }
+
+
+    $(document).ready(function(){
+        $("#participant-id").text(pid);
+        /*
+        $("#preQ").attr("href", preQ);
+        $("#afterMixQ").attr("href", afterMixQ);
+        $("#textQ").attr("href", textQ);
+        $("#afterHeatmapQ").attr("href", afterHeatmapQ);
+        $("#postQ").attr("href", postQ);
+        $("#selfmixTutorial").attr("href", selfmixTutorial);
+        $("#muddyTutorial").attr("href", muddyTutorial);
+        $("#lesson1Q").attr("href", afterMixQ);
+        $("#lesson2Q").attr("href", afterMixQ);
+        */
+        $("#preQ").attr("href", preQ);
+        $("#tutorialQ").attr("href", tutorialQ);
+        $("#exploreQ1").attr("href", exploreQ);
+        $("#exploreQ2").attr("href", exploreQ);
+        $("#exploreQ3").attr("href", exploreQ);
+        $("#postQ").attr("href", postQ);
+        $("#finalQ").attr("href", finalQ);
+
+        $("a").click(function(){
+            $(this).closest("h4").find(".progress").html("V&nbsp;&nbsp;");
+            // Log.add("study.html", "click", {"pid": pid, "url": $(this).attr("href")});
+        });
+/*
+        $.ajax({
+            type: "GET",
+            url: "teachers-round2.tsv",
+            dataType: "text",
+            success: function(data) {processData(data);}
+        });
+*/
+        createTasks();
+        var numTasks = 3;
+        var pnum = parseInt(pid.substr(1));
+        console.log("pnum", pnum);
+        for (i = 1; i <= numTasks; i++) {
+            console.log("TASK #", (pnum - 1) * numTasks + i)
+            task = conditions[(pnum - 1) * numTasks + i];
+            $("#issue" + i).text("이슈: " + issues[i - 1]);
+            $("#explore" + i).attr("href", task.url);
+            $("#explore" + i).attr("href", task.url);
+            $("#explore" + i + "Condition").text(task.itype);
+
+        }
+/*
+        Log.createTasks();
+        var numTasks = 6;
+        var i, task, url, videoID, part, qUrl, tutorialConUrl, tutorialExpUrl;
+        $("<h3/>").html("Part 0. Tutorial").appendTo($("#tasks"));
+        tutorialConUrl = "simple_examples/tutorial.html?ks=0";
+        // "/app/player/6.00x/" + Log.tutorialCon.vid +
+        //         "?iid=" + Log.tutorialCon.iid +
+        //         "&pid=" + pid +
+        //         "&tid=" + Log.tutorialCon.tid +
+        //         "&torder=" + Log.tutorialCon.torder +
+        //         "&ttype=" + Log.tutorialCon.ttype +
+        //         "&vcode=" + Log.tutorialCon.vcode;
+        tutorialExpUrl = "simple_examples/tutorial.html?ks=1";
+        // "/app/player/6.00x/" + Log.tutorialExp.vid +
+                // "?iid=" + Log.tutorialExp.iid +
+                // "&pid=" + pid +
+                // "&tid=" + Log.tutorialExp.tid +
+                // "&torder=" + Log.tutorialExp.torder +
+                // "&ttype=" + Log.tutorialExp.ttype +
+                // "&vcode=" + Log.tutorialExp.vcode;
+        $("<div/>")
+            .html("<span class='progress'>&nbsp;&nbsp;&nbsp;</span><a target='_blank' href='" + tutorialConUrl + "'>Tutorial 1</a>&nbsp;&nbsp;&nbsp;No feedback")
+            .appendTo($("#tasks"));
+        $("<div/>")
+            .html("<span class='progress'>&nbsp;&nbsp;&nbsp;</span><a target='_blank' href='" + tutorialExpUrl + "'>Tutorial 2</a>&nbsp;&nbsp;&nbsp;Feedback")
+            .appendTo($("#tasks"));
+
+        for (i = 1; i <= numTasks; i++) {
+            console.log("TASK #", (pid - 1) * numTasks + i)
+            task = Log.conditions[(pid - 1) * numTasks + i];
+            url = task.vid;
+            if (task.iid == "con")
+                url += "?ks=0";
+            else
+                url += "?ks=1";
+                // "?iid=" + task.iid +
+                // "&pid=" + task.pid +
+                // "&tid=" + task.tid +
+                // "&torder=" + task.torder +
+                // "&ttype=" + task.ttype +
+                // "&vcode=" + task.vcode;
+            if (i == 1) {
+                part = 1;
+                $("<h3/>").html("Part 1.").appendTo($("#tasks"));
+            } else if (i == 3) {
+                part = 2;
+                $("<h3/>").html("Part 2.").appendTo($("#tasks"));
+            } else if (i == 5) {
+                part = 3;
+                $("<h3/>").html("Part 3.").appendTo($("#tasks"));
+            }
+            if (part == 1) {
+                if (task.iid == "con")
+                    qUrl = Log.part1QuestionnaireUrlNo;
+                else
+                    qUrl = Log.part1QuestionnaireUrlYes;
+            } else if (part == 2) {
+                if (task.iid == "con" && task.vcode == "A")
+                    qUrl = Log.part2QuestionnaireUrlNoA;
+                else if (task.iid == "con" && task.vcode == "B")
+                    qUrl = Log.part2QuestionnaireUrlNoB;
+                else if (task.iid == "exp" && task.vcode == "A")
+                    qUrl = Log.part2QuestionnaireUrlYesA;
+                else
+                    qUrl = Log.part2QuestionnaireUrlYesB;
+            } else if (part == 3) {
+                if (task.iid == "con")
+                    qUrl = Log.part3QuestionnaireUrlNo;
+                else
+                    qUrl = Log.part3QuestionnaireUrlYes;
+            }
+            var cond = "Feedback";
+            if (task.iid == "con")
+                cond = "No feedback";
+            $("<div/>")
+                .html("<span class='progress'>&nbsp;&nbsp;&nbsp;</span>" +
+                    "<a target='_blank' href='" + url + "'>Task " + task.torder + "</a>&nbsp;&nbsp;&nbsp;" + cond + "&nbsp;&nbsp;&nbsp;(" + task.vcode + ")")
+                    //" " + task.iid + " " + task.pid + " " + task.tid + " " + task.torder + " " + task.ttype + " " + task.vcode + " " + task.vid)
+                .appendTo($("#tasks"));
+            $("<div/>")
+                .html("<span class='progress'>&nbsp;&nbsp;&nbsp;</span>" +
+                    "<a target='_blank' href='" + qUrl + "'>Post-Task Questionnaire</a>")
+                .appendTo($("#tasks"));
+        }
+        // $("<h3/>").html("Part 4. Wrap-up").appendTo($("#tasks"));
+        // $("<div/>")
+        //     .html("<span class='progress'>&nbsp;&nbsp;&nbsp;</span><a target='_blank' href='" + Log.post1QuestionnaireUrl + "'>Post Questionnaire #1</a>")
+        //     .appendTo($("#tasks"));
+        // $("<div/>")
+        //     .html("<span class='progress'>&nbsp;&nbsp;&nbsp;</span><a target='_blank' href='" + Log.post2QuestionnaireUrl + "'>Post Questionnaire #2</a>")
+        //     .appendTo($("#tasks"));
+        // Log.add("study.html", "loaded", {"pid": pid});
+*/
+
+    });
+    </script>
+
+</body>
+</html>
