@@ -58,7 +58,7 @@
                 </div>
             <h3>3. 본 실험 (총 30분)</h3>
                 <div id="muddymix">
- 본 실험에서 귀하는 세 가지 이슈(장애인 복지, 안전 예산, 육아 지원)과 관련된 서울시 예산을 찾는 일을 하게 됩니다. 서로 다른 세 가지의 이슈를 각기 다른 세 인터페이스 A, B, C를 통해 탐색하게 됩니다. 각 탐색의 목적은  해당 이슈에 서울시가 사용하고 있는 예산 규모를 예측해 보는 것입니다.
+ 본 실험에서 귀하는 세 가지 이슈(장애인 복지, 안전 예산, 육아 지원)과 관련된 서울시 예산을 찾는 일을 하게 됩니다. 서로 다른 세 가지의 이슈를 각기 다른 세 인터페이스 A, B, C를 통해 탐색하게 됩니다. 각 탐색의 목적은  해당 이슈에 서울시가 사용하고 있는 예산 규모를 예측해 보는 것입니다.<br/><br/>
  각 탐색에는 7분의 시간이 주어지며 실험 진행자가 3분 전, 1분 전에 알려드립니다. 탐색이 일찍 끝난 경우 다음 탐색으로 넘어가지 마시고 기다려 주십시오. 매 7분이 지난 후 탐색이 끝날 때마다 아래 링크의 설문조사를 작성하신 뒤 다음 안내가 있을 때까지 기다려 주십시오.<br/>
                 <h4><span id="issue1"></span></h4>
                 <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
@@ -117,7 +117,7 @@
     var tutorialQ = "https://docs.google.com/document/d/1U60ikNFIGbXQ5nmaSGxjjWjwtoQdwfyki8Jz5PuDCwI/edit?usp=sharing";
     var exploreQ = "https://docs.google.com/forms/d/1bAHMcoCLzqWM6I-0uiWSoh9avBZ3CT-jeOaP2AZomEM/viewform";
     var postQ = "https://docs.google.com/forms/d/1tcFqurFYSw3GnH4QmDNl66WwGAVULnVtx8gom3GGRmA/viewform";
-    var finalQ = "";
+    var finalQ = "https://qtrial2014.az1.qualtrics.com/SE/?SID=SV_cHikimqwyCbJWpT";
 
 
     var mixes = {};
@@ -186,17 +186,6 @@
 
     $(document).ready(function(){
         $(".participant-id").text(pid);
-        /*
-        $("#preQ").attr("href", preQ);
-        $("#afterMixQ").attr("href", afterMixQ);
-        $("#textQ").attr("href", textQ);
-        $("#afterHeatmapQ").attr("href", afterHeatmapQ);
-        $("#postQ").attr("href", postQ);
-        $("#selfmixTutorial").attr("href", selfmixTutorial);
-        $("#muddyTutorial").attr("href", muddyTutorial);
-        $("#lesson1Q").attr("href", afterMixQ);
-        $("#lesson2Q").attr("href", afterMixQ);
-        */
         $("#preQ").attr("href", preQ);
         $("#tutorialQ").attr("href", tutorialQ);
         $("#exploreQ1").attr("href", exploreQ);
@@ -209,14 +198,7 @@
             $(this).closest("h4").find(".progress").html("V&nbsp;&nbsp;");
             // Log.add("study.html", "click", {"pid": pid, "url": $(this).attr("href")});
         });
-/*
-        $.ajax({
-            type: "GET",
-            url: "teachers-round2.tsv",
-            dataType: "text",
-            success: function(data) {processData(data);}
-        });
-*/
+
         createTasks();
         var numTasks = 3;
         var pnum = parseInt(pid.substr(1));
@@ -226,104 +208,9 @@
             task = conditions[(pnum - 1) * numTasks + i];
             $("#issue" + i).text("이슈: " + issues[i - 1]);
             $("#explore" + i).attr("href", task.url);
-            $("#explore" + i).attr("href", task.url);
             $("#explore" + i + "Condition").text(task.itype);
 
         }
-/*
-        Log.createTasks();
-        var numTasks = 6;
-        var i, task, url, videoID, part, qUrl, tutorialConUrl, tutorialExpUrl;
-        $("<h3/>").html("Part 0. Tutorial").appendTo($("#tasks"));
-        tutorialConUrl = "simple_examples/tutorial.html?ks=0";
-        // "/app/player/6.00x/" + Log.tutorialCon.vid +
-        //         "?iid=" + Log.tutorialCon.iid +
-        //         "&pid=" + pid +
-        //         "&tid=" + Log.tutorialCon.tid +
-        //         "&torder=" + Log.tutorialCon.torder +
-        //         "&ttype=" + Log.tutorialCon.ttype +
-        //         "&vcode=" + Log.tutorialCon.vcode;
-        tutorialExpUrl = "simple_examples/tutorial.html?ks=1";
-        // "/app/player/6.00x/" + Log.tutorialExp.vid +
-                // "?iid=" + Log.tutorialExp.iid +
-                // "&pid=" + pid +
-                // "&tid=" + Log.tutorialExp.tid +
-                // "&torder=" + Log.tutorialExp.torder +
-                // "&ttype=" + Log.tutorialExp.ttype +
-                // "&vcode=" + Log.tutorialExp.vcode;
-        $("<div/>")
-            .html("<span class='progress'>&nbsp;&nbsp;&nbsp;</span><a target='_blank' href='" + tutorialConUrl + "'>Tutorial 1</a>&nbsp;&nbsp;&nbsp;No feedback")
-            .appendTo($("#tasks"));
-        $("<div/>")
-            .html("<span class='progress'>&nbsp;&nbsp;&nbsp;</span><a target='_blank' href='" + tutorialExpUrl + "'>Tutorial 2</a>&nbsp;&nbsp;&nbsp;Feedback")
-            .appendTo($("#tasks"));
-
-        for (i = 1; i <= numTasks; i++) {
-            console.log("TASK #", (pid - 1) * numTasks + i)
-            task = Log.conditions[(pid - 1) * numTasks + i];
-            url = task.vid;
-            if (task.iid == "con")
-                url += "?ks=0";
-            else
-                url += "?ks=1";
-                // "?iid=" + task.iid +
-                // "&pid=" + task.pid +
-                // "&tid=" + task.tid +
-                // "&torder=" + task.torder +
-                // "&ttype=" + task.ttype +
-                // "&vcode=" + task.vcode;
-            if (i == 1) {
-                part = 1;
-                $("<h3/>").html("Part 1.").appendTo($("#tasks"));
-            } else if (i == 3) {
-                part = 2;
-                $("<h3/>").html("Part 2.").appendTo($("#tasks"));
-            } else if (i == 5) {
-                part = 3;
-                $("<h3/>").html("Part 3.").appendTo($("#tasks"));
-            }
-            if (part == 1) {
-                if (task.iid == "con")
-                    qUrl = Log.part1QuestionnaireUrlNo;
-                else
-                    qUrl = Log.part1QuestionnaireUrlYes;
-            } else if (part == 2) {
-                if (task.iid == "con" && task.vcode == "A")
-                    qUrl = Log.part2QuestionnaireUrlNoA;
-                else if (task.iid == "con" && task.vcode == "B")
-                    qUrl = Log.part2QuestionnaireUrlNoB;
-                else if (task.iid == "exp" && task.vcode == "A")
-                    qUrl = Log.part2QuestionnaireUrlYesA;
-                else
-                    qUrl = Log.part2QuestionnaireUrlYesB;
-            } else if (part == 3) {
-                if (task.iid == "con")
-                    qUrl = Log.part3QuestionnaireUrlNo;
-                else
-                    qUrl = Log.part3QuestionnaireUrlYes;
-            }
-            var cond = "Feedback";
-            if (task.iid == "con")
-                cond = "No feedback";
-            $("<div/>")
-                .html("<span class='progress'>&nbsp;&nbsp;&nbsp;</span>" +
-                    "<a target='_blank' href='" + url + "'>Task " + task.torder + "</a>&nbsp;&nbsp;&nbsp;" + cond + "&nbsp;&nbsp;&nbsp;(" + task.vcode + ")")
-                    //" " + task.iid + " " + task.pid + " " + task.tid + " " + task.torder + " " + task.ttype + " " + task.vcode + " " + task.vid)
-                .appendTo($("#tasks"));
-            $("<div/>")
-                .html("<span class='progress'>&nbsp;&nbsp;&nbsp;</span>" +
-                    "<a target='_blank' href='" + qUrl + "'>Post-Task Questionnaire</a>")
-                .appendTo($("#tasks"));
-        }
-        // $("<h3/>").html("Part 4. Wrap-up").appendTo($("#tasks"));
-        // $("<div/>")
-        //     .html("<span class='progress'>&nbsp;&nbsp;&nbsp;</span><a target='_blank' href='" + Log.post1QuestionnaireUrl + "'>Post Questionnaire #1</a>")
-        //     .appendTo($("#tasks"));
-        // $("<div/>")
-        //     .html("<span class='progress'>&nbsp;&nbsp;&nbsp;</span><a target='_blank' href='" + Log.post2QuestionnaireUrl + "'>Post Questionnaire #2</a>")
-        //     .appendTo($("#tasks"));
-        // Log.add("study.html", "loaded", {"pid": pid});
-*/
 
     });
     </script>
