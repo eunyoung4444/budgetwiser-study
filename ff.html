@@ -288,6 +288,16 @@
         var pnum = parseInt(pid.substr(1));
         var itype = pid[0];
         var starting = 0;
+        if (pnum < 1 || pnum > 12){
+            alert("잘못된 사용자 ID 입니다.");
+            $("#main").hide();
+        }
+        if (itype != "A" && itype != "B" && itype != "C"){
+            alert("잘못된 사용자 ID 입니다.");
+            $("#main").hide();
+        }
+
+
         console.log("pnum", pnum, "itype", itype);
 
         $(".instruction").text(getInstruction(itype));
