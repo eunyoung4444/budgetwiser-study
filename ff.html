@@ -152,7 +152,9 @@
     var pid = gup("pid");
 
     var preQ = "https://docs.google.com/forms/d/1ByZyvjt1U3HVAD6qYZypLCuW14JpxfqEoi-6bgrXuA8/viewform";
-    var tutorialQ = "";
+    var tutorialQA = "https://docs.google.com/document/d/1SLaBETiFwPj6Mw38AAL39kNIHDZ0FLN-nRGyyu_59Dg/edit";
+    var tutorialQB = "https://docs.google.com/document/d/13qNzxLkeXvL-Z4hNVRdVYwd3pONrsIWdYE_lqUIU2sM/edit";
+    var tutorialQC = "https://docs.google.com/document/d/1Y5llB-dByUQ9dSzoTbi2ZIZqEdGfQhCm21m0ksxjvvA/edit";
     var preArticleQ = "https://docs.google.com/forms/d/1jfZR_IXc-Truz6xR4BNAhqW_uOA8NJRKrrkVQT1wIDE/viewform";
     var postArticleQ = "https://docs.google.com/forms/d/1g2s06Wa6KeoT-GUQtZMcX1OifMcqoWQjuhKQmwnH8E4/viewform";
 
@@ -252,7 +254,7 @@
                 // taskOrder = taskCount % tseq.length;
                 console.log(itype, taskOrder[j]);
                 conditions[taskCount] = {
-                    "pid": itype + (i % 12),
+                    "pid": itype + ((i-1) % 12 + 1),
                     "tid": taskCount,
                     "torder": j + 1,
                     "itype": itype,
@@ -275,7 +277,6 @@
     $(document).ready(function(){
         $(".participant-id").text(pid);
         $("#preQ").attr("href", preQ);
-        $("#tutorialQ").attr("href", tutorialQ);
         $(".preArticleQ").attr("href", preArticleQ);
         $(".postArticleQ").attr("href", postArticleQ);
         $("#finalQ").attr("href", finalQ);
@@ -302,12 +303,17 @@
 
         $(".instruction").text(getInstruction(itype));
 
-        if (itype == "A")
+        if (itype == "A") {
+            $("#tutorialQ").attr("href", tutorialQA);
             $("#postQ").attr("href", postQA);
-        else if (itype == "B")
+        } else if (itype == "B") {
+            $("#tutorialQ").attr("href", tutorialQB);
             $("#postQ").attr("href", postQB);
-        else if (itype == "C")
+        }
+        else if (itype == "C") {
+            $("#tutorialQ").attr("href", tutorialQC);
             $("#postQ").attr("href", postQC);
+        }
 
         createTasks(itype);
 

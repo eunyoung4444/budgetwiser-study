@@ -114,7 +114,7 @@
     var pid = gup("pid");
 
     var preQ = "https://docs.google.com/forms/d/1Hmb_GIbgUjlDHVgLaffdIw-ZwvFOGi7EV5p4bwumhnI/viewform";
-    var tutorialQ = "https://docs.google.com/document/d/1U60ikNFIGbXQ5nmaSGxjjWjwtoQdwfyki8Jz5PuDCwI/edit?usp=sharing";
+    var tutorialQ = "https://docs.google.com/document/d/1U60ikNFIGbXQ5nmaSGxjjWjwtoQdwfyki8Jz5PuDCwI/edit";
     var exploreQ = "https://docs.google.com/forms/d/1bAHMcoCLzqWM6I-0uiWSoh9avBZ3CT-jeOaP2AZomEM/viewform";
     var postQ = "https://docs.google.com/forms/d/1tcFqurFYSw3GnH4QmDNl66WwGAVULnVtx8gom3GGRmA/viewform";
     var finalQ = "https://qtrial2014.az1.qualtrics.com/SE/?SID=SV_cHikimqwyCbJWpT";
@@ -158,7 +158,8 @@
         for (i = 1; i <= numParticipants; i++) {
             console.log("Participant", i);
             taskOrder = mappings[(i-1) % 6];
-            port = 30000 + (i % 12);
+            port = 30000 + ((i-1) % 12) + 1;
+
 
             for (j = 0; j < numTasks; j++) {
                 taskCount += 1;
