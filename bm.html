@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>대중 참여형 정책 수립을 위한 크라우드소싱 정책 플랫폼 고안</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel='stylesheet' type='text/css'>
     <style>
@@ -36,7 +37,7 @@
 
     <div id="main">
         <div id="leftpane">
-            <h2>참가자 ID: <span id="participant-id"></span></h2>
+            <h2>참가자 ID: <span class="participant-id"></span></h2>
             <div>
                 "대중 참여형 정책 수립을 위한 크라우드소싱 정책 플랫폼 고안" 연구 관련 실험에 참여해 주셔서 감사합니다. 다음은 실험 순서 및 방법에 대한 안내사항입니다. 실험 도중에 문의사항이 있으실 경우 실험 진행자에게 알려주시기 바랍니다.
             </div>
@@ -61,21 +62,21 @@
  각 탐색에는 7분의 시간이 주어지며 실험 진행자가 3분 전, 1분 전에 알려드립니다. 탐색이 일찍 끝난 경우 다음 탐색으로 넘어가지 마시고 기다려 주십시오. 매 7분이 지난 후 탐색이 끝날 때마다 아래 링크의 설문조사를 작성하신 뒤 다음 안내가 있을 때까지 기다려 주십시오.<br/>
                 <h4><span id="issue1"></span></h4>
                 <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
-                <a target="_blank" href="" id="explore1">[인터페이스 <span id="explore1Condition"></span>]</a> (7분)</h4>
+                <a target="_blank" href="" id="explore1">[인터페이스 <span id="explore1Condition"></span>]</a> <small>(7분) 로그인 ID: <span class="participant-id"></span>@test.com, 패스워드: test</small></h4>
 
                 <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
                 <a target="_blank" href="" id="exploreQ1">[탐색 후 설문]</a></h4>
 
                 <h4><span id="issue2"></span></h4>
                 <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
-                <a target="_blank" href="" id="explore2">[인터페이스 <span id="explore2Condition"></span>]</a> (7분)</h4>
+                <a target="_blank" href="" id="explore2">[인터페이스 <span id="explore2Condition"></span>]</a> <small>(7분) 로그인 ID: <span class="participant-id"></span>@test.com, 패스워드: test</small></h4>
 
                 <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
                 <a target="_blank" href="" id="exploreQ2">[탐색 후 설문]</a></h4>
 
                 <h4><span id="issue3"></span></h4>
                 <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
-                <a target="_blank" href="" id="explore3">[인터페이스 <span id="explore3Condition"></span>]</a> (7분)</h4>
+                <a target="_blank" href="" id="explore3">[인터페이스 <span id="explore3Condition"></span>]</a> <small>(7분) 로그인 ID: <span class="participant-id"></span>@test.com, 패스워드: test</small></h4>
 
                 <h4><span class='progress'>&nbsp;&nbsp;&nbsp;</span>
                 <a target="_blank" href="" id="exploreQ3">[탐색 후 설문]</a></h4>
@@ -184,7 +185,7 @@
 
 
     $(document).ready(function(){
-        $("#participant-id").text(pid);
+        $(".participant-id").text(pid);
         /*
         $("#preQ").attr("href", preQ);
         $("#afterMixQ").attr("href", afterMixQ);
